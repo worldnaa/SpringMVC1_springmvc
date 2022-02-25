@@ -12,8 +12,9 @@ public class MappingController {
 
     /**
      * 기본 요청
-     * 배열로 둘다 허용 /hello-basic, /hello-basic/
-     * HTTP 메서드 모두 허용 GET, HEAD, POST, PUT, PATCH, DELETE
+     * /hello-basic, /hello-basic/ => 둘 다 허용
+     * HTTP 메서드 모두 허용 => GET, HEAD, POST, PUT, PATCH, DELETE
+     * 대부분의 속성을 배열[]로 제공하므로 다중 설정이 가능 => {"/hello-basic", "/hello-go"}
      */
     @RequestMapping({"/hello-basic", "/hello-go"})
     public String helloBasic() {
